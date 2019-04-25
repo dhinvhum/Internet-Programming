@@ -4,73 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <!-- Style -->
-    <link rel="stylesheet" type="text/css" href="style-login.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Update product</title>
 </head>
 <body>
-
     <div class="container">
-         
-        <form>
+
+        <div class="container-form">
             
-            <table class="login-table" action="" method="POST">
+            <h5> --- Update Product --- </h5>   
+           
+            <form class="login-table" action="" method="POST">
+
+                <div class="form-group">
+                              
+                        <label class="label">ID :</label>
+                        <input type="text" id="product-id" class="form-control border border-secondary rounded" placeholder="Input product ID" required>
+                 
+                        <label class="label">Product&nbsp:</label>
+                        <input type="text" id="product-name" class="form-control border border-secondary rounded" placeholder="Input product name" required>
+
+                    
+                    <div class="form-row">   
+                          
+                        <div class="form-group col-md-6">
+                                <label class="label">Price&nbsp:</label>
+                                <input type="number" value=0 min=0 step=100 id="product-price" class="form-control border border-secondary rounded" required onclick="chackvalue()">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                                <label class="label">Quantity&nbsp:</label>
+                                <input type="number" value=0 min=0 step=10 id="product-quantity" class="form-control border border-secondary rounded" required onclick="chackvalue()">
+                        </div>
                 
-                <tr>
-                    <td class="lable">
-                        <label> ID: </label>
-                    </td>
-                    <td>
-                        <input type="text" id="product-id">
-                    </td>
-                </tr>
 
-                <tr>
-                        <td class="lable">
-                            <label> Product: </label>
-                        </td>
-                        <td>
-                            <input type="text" id="product-name">
-                        </td>
-                </tr>
+                    </div>        
+  
+                <div class="form-button">
+                    
+                    <button type="submit" class="btn btn-success btn-sm">Update</button>
+                
+                </div>
 
-                <tr>
-                        <td class="lable">
-                            <label> Size: </label>
-                        </td>
-                        <td>
-                            <input type="text" id="product-size">
-                        </td>
-                </tr>
-
-                <tr>
-                        <td class="lable">
-                            <label> Price: </label>
-                        </td>
-                        <td>
-                            <input type="text" id="product-price">
-                        </td>
-                </tr>
-            
-                <tr>
-                    <td class="lable">
-                        <label> Quantity: </label>
-                    </td>
-                    <td>
-                        <input type="int" id="product-quantity">
-                    </td>
-                </tr>
-
-            </table>
-            
-            <button type="submit" class="Button-login">Submit</button>
-    
-        </form>
+            </form>
+                            
+        </div>
 
     </div>
 
-    
+    <!-- Function -->
+    <script src="script.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
