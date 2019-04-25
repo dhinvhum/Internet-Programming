@@ -10,31 +10,35 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <!-- Style -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Register Customer</title>
+    <title>Add Gift</title>
 </head>
 <body>
     <div class="container">
 
         <div class="container-form">
             
-                <h5> --- Register Customer --- </h5>
+                <h5> --- Add Gift --- </h5>
 
-            <form class="Register Customer" action="" method="POST">
+            <form class="Add Gift" action="" method="POST">
 
                 <div class="form-group">
                               
-                        <label class="label">Name&nbsp:</label>
-                        <input type="text" id="RegisterCustomer-Name" class="form-control border border-secondary rounded" required>
-                        
-                        <label class="label">Surname&nbsp:</label>
-                        <input type="text" id="RegisterCustomer-Surname" class="form-control border border-secondary rounded" required>
-                        
-                        <label class="label">Level&nbsp:</label>
-                        <select id="RegisterCustomer-Level" class="form-control border border-secondary rounded" required>
-                            <option value="Genaral">General</option>
-                            <option value="Silver">Silver</option>
-                            <option value="Gold">Gold</option>
-                        </select>
+                        <label class="label">Product&nbsp:</label>
+                        <input type="text" id="AddingGift-Product" class="form-control border border-secondary rounded"  placeholder="Input product name" required>
+
+                </div>
+
+                <div class="form-row">
+
+                    <div class="form-group col-md-6">
+                        <label class="label">Point&nbsp:</label>
+                        <input type="number" value=0 min=0 step=5 id="AddingGift-Point" class="form-control border border-secondary rounded" required> 
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label class="label">Quantity&nbsp:</label>
+                        <input type="number" value=0 min=0 step=10 id="AddingGift-Quatity" class="form-control border border-secondary rounded" required onclick="chackvalue()">
+                    </div>
 
                 </div>
                 
@@ -49,7 +53,6 @@
             </form>
                             
         </div>
-
 
     </div>
 

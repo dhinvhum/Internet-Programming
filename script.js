@@ -9,8 +9,9 @@ function check_login() {
 
     for (i=1; i<2; i++ ) {
 
-        if ((id=="Poom")&&(pass=="Pang")) {
+        if ((id=="")&&(pass=="")) {
             console.log("true");
+            
         } else {
             console.log("false");
             alert("Wrong ID or Password");
@@ -21,4 +22,8 @@ function check_login() {
 
 function reset() {
     document.getElementsByClassName("login").reset();
+}
+
+function check_value() {
+    console.log(document.getElementById("AddingGift-Point").value)
 }
