@@ -31,3 +31,8 @@ function check_value() {
 function wrongID() {
     
 }
+
+function employee_table() {
+    console.log("true");
+    window.location.href = "employee_table.html" ;
+}
