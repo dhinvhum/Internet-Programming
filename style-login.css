@@ -1,0 +1,43 @@
+
+body, button {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+}
+.container {
+    border-style: ridge;
+    border-radius: 15px;
+    border-color: beige;
+}
+
+div {
+    margin: auto;
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+}
+
+table {
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+.lable {
+    text-align: right;
+}
+
+input {
+    width: 80%;  
+    border-radius: 8px;  
+}
+
+button {
+    border-radius: 5px;
+}
+
+#button-file {
+    border-radius: 5px;
+}
+
+select {
+    font-family: 'Quicksand', sans-serif;
+}
