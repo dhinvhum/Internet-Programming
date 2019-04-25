@@ -27,3 +27,7 @@ function reset() {
 function check_value() {
     console.log(document.getElementById("AddingGift-Point").value)
 }
+
+function wrongID() {
+    
+}
