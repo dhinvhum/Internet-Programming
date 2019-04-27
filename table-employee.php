@@ -17,6 +17,36 @@
 
         <h5>--- Employee table ---</h5>
 
+        <?php
+            
+            $connect = mysqli_connect("localhost", "root", "", "store");
+
+                if (!isset($update)) {
+
+                    $sql = 'SELECT * FROM employee';
+                    $result = mysqli_query($connect, $sql);
+                    $numrows = mysqli_num_rows($result);
+                    $numfields = mysqli_num_fields($result);
+
+                    if (!$result) {
+                        echo '<b>Error </b>'.mysqli_errno().':'.mysqli_error().'<by>';
+                    } else if ($numrows == 0) {
+                        echo '<b>Query executed successfully bot no row returns!</b>';
+                    } else {
+                        echo '<div class="table-responsive">';
+                        echo '<table class="table">';
+                        echo '<thead class="thead-dark"><tr>';
+                        echo '<th scope="col">ID</th>';
+                        echo '<th scope="col">Name</th>';
+                        echo '<th scope="col">Surname</th>';
+                        echo '<th scope="col">Position</th>';
+                        echo '<th scope="col">Picture</th>';
+                        echo '</thead></tr>';
+                    }
+                }
+
+        ?>
+
     </div>
 
     <!-- Function -->
