@@ -17,6 +17,57 @@
 
         <h5>--- Product table ---</h5>
 
+        <?php
+            
+            $connect = mysqli_connect("localhost", "root", "", "store");
+
+                if (!isset($update)) {
+
+                    $sql = 'SELECT * FROM product';
+                    $result = mysqli_query($connect, $sql);
+                    $numrows = mysqli_num_rows($result);
+                    $numfields = mysqli_num_fields($result);
+
+                    if (!$result) {
+                        echo '<b>Error </b>'.mysqli_errno().':'.mysqli_error().'<by>';
+                    } else if ($numrows == 0) {
+                        echo '<b>Query executed successfully bot no row returns!</b>';
+                    } else {
+                        echo '<div class="table-responsive">';
+                        echo '<table class="table">';
+                        echo '<thead class="thead-dark"><tr>';
+                        echo '<th scope="col">ID</th>';
+                        echo '<th scope="col">Product</th>';
+                        echo '<th scope="col">Size</th>';
+                        echo '<th scope="col">Color</th>';
+                        echo '<th scope="col">Price</th>';
+                        echo '<th scope="col">Quantity</th>';
+                        echo '<th scope="col">Update</th>';
+                        echo '</thead></tr>';
+
+                        while($row = mysqli_fetch_array($result)){
+                            echo '<form name="update_product'.$row['ID'].'" method="post" action="update-product">'."\n";
+                        
+                            echo '<tbody><tr>';
+                                for($i=0;$i<$numfields;$i++){
+                                echo '<td>'.$row[$i].'&nbsp;</td>'."\n";									
+                            }
+                            echo '<input type="hidden" name="id" value="'.$row['ID'].'">'."\n";
+                
+                            echo '<td><input name="update" type="submit" value="Update" onClick="returnconfirmUpdate();"></td>'."\n";
+                                        echo '</tr></tbody>'."\n";
+                                        echo '</form>'."\n";
+                                }
+                                echo '</table>';
+                            }
+                }
+                        
+                
+                    mysqli_close($connect);
+
+                    ?>
+  
+
     </div>
 
     <!-- Function -->
