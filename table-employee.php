@@ -46,12 +46,12 @@
                         echo '</thead></tr>';
 
                         while ($row = mysqli_fetch_array($result)) {
-                            echo '<form name="update_customer'.$row['ID'].'" method="POST" action="update-customer">'."\n";
+                            echo '<form name="update_customer'.$row['ID'].'" method="POST" action="update-employee.php">'."\n";
                             echo '<tbody><tr>';
                                 for ($i=0; $i<$numfields; $i++) {
                                     echo '<td>'.$row[$i].'&nbsp;</td>'."\n";
                                 }
-                                echo '<input type="hidden" name="id" value="'.$row['ID'].'">'."\n";
+                                echo '<input type="hidden" name="index" value="'.$row['ID'].'">';
                                 echo '<td><input  name="update" type="submit" value="update"></td>'."\n";
                                 echo '</tr>';
                                 echo '</form>';

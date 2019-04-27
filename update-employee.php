@@ -10,27 +10,27 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <!-- Style -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Register Employee</title>
+    <title>Update Employee</title>
 </head>
 <body>
     <div class="container">
 
         <div class="container-form">
             
-                <h5> --- Register Employee --- </h5>
+                <h5> --- Update Employee --- </h5>
 
-            <form class="Register Employee" action="" method="POST">
+            <form class="Update Employee" action="update-employee-set.php" method="POST">
 
                 <div class="form-group">
                               
                         <label class="label">Name&nbsp:</label>
-                        <input type="text" id="RegisterEmployee-Name" class="form-control border border-secondary rounded" placeholder="Input your name" required>
+                        <input type="text" name="UpdateEmployee-Name" class="form-control border border-secondary rounded" placeholder="Input your name"require>
                         
                         <label class="label">Surname&nbsp:</label>
-                        <input type="text" id="RegisterEmployee-Surname" class="form-control border border-secondary rounded" placeholder="Input your surname" required>
+                        <input type="text" name="UpdateEmployee-Surname" class="form-control border border-secondary rounded" placeholder="Input your surname" require>
                 
                         <label class="label">Password&nbsp:</label>
-                        <input type="text" id="RegisterEmployee-Password" class="form-control border border-secondary rounded" placeholder="Password" required>
+                        <input type="text" name="UpdateEmployee-Password" class="form-control border border-secondary rounded" placeholder="Password" require>
                         <small id="emailHelp" class="form-text text-muted">Please share the password only this employee.</small>
                 </div>
 
@@ -38,8 +38,8 @@
 
                     <div class="form-group col-md-6">
                         <label class="label">Postition&nbsp:</label>
-                        <select id="RegisterEmployee-position" class="form-control border border-secondary rounded" required>
-                            <option value="null">Please select</option>
+                        <select name="UpdateEmployee-position" class="form-control border border-secondary rounded" require>
+                            <option value="">Please select</option>
                             <option value="Manager">Manager</option>
                             <option value="Cashier">Cashier</option>
                         </select>
@@ -47,16 +47,22 @@
 
                     <div class="form-group col-md-6">
                         <label class="label">Picture&nbsp:</label>
-                        <input type="file" id="RegisterEmployee-Picture"  required>
+                        <input type="file" name="UpdateEmployee-Picture" require>
                     </div>
 
-                </div>                   
+                </div>         
                 
-                <div class="form-button">       
-
-                    <button class="btn btn-success btn-sm" type="submit">Register</button>
+                    <?php
+                        $index = $_POST['index'];
+                        echo $index;
+                        echo '<input type="hidden" name="index" value="'.$index.'">';
+                    ?>
+                
+                <div class="form-button">
+                    
+                    <button class="btn btn-success btn-sm" type="submit">Update</button>
                     <input id="font-white" class="btn btn-warning btn-sm" type="button" value="Clear" onclick="reset()">  
-                                  
+                    
                 </div>
 
             </form>

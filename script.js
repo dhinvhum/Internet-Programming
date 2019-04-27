@@ -21,6 +21,7 @@ function check_login() {
             alert("Wrong ID or PASSWORD, Please try again BABY!");
         } 
     }
+}
 
 function reset() {
     document.getElementsByClassName("login").reset();
