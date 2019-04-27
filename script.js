@@ -19,10 +19,8 @@ function check_login() {
         }else {
             console.log("false");
             alert("Wrong ID or PASSWORD, Please try again BABY!");
-        }
+        } 
     }
-    
-}
 
 function reset() {
     document.getElementsByClassName("login").reset();
