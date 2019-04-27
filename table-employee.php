@@ -15,7 +15,7 @@
 <body>
     <div class="container">
 
-        <h5>--- Employee table ---</h5>
+        <h5>--- Employee table ---</h5><br>
 
         <?php
             
@@ -40,9 +40,25 @@
                         echo '<th scope="col">Name</th>';
                         echo '<th scope="col">Surname</th>';
                         echo '<th scope="col">Position</th>';
+                        echo '<th scope="col">Password</th>';
                         echo '<th scope="col">Picture</th>';
+                        echo '<th scope="col">Update</th>';
                         echo '</thead></tr>';
-                    }
+
+                        while ($row = mysqli_fetch_array($result)) {
+                            echo '<form name="update_customer'.$row['ID'].'" method="POST" action="update-customer">'."\n";
+                            echo '<tbody><tr>';
+                                for ($i=0; $i<$numfields; $i++) {
+                                    echo '<td>'.$row[$i].'&nbsp;</td>'."\n";
+                                }
+                                echo '<input type="hidden" name="id" value="'.$row['ID'].'">'."\n";
+                                echo '<td><input  name="update" type="submit" value="update"></td>'."\n";
+                                echo '</tr>';
+                                echo '</form>';
+                        }
+                        echo '</table>';
+                    }   
+            
                 }
 
         ?>
