@@ -17,6 +17,8 @@
 
         <h5>--- Product table ---</h5>
 
+        <br>
+
         <?php
             
             $connect = mysqli_connect("localhost", "root", "", "store");
@@ -54,7 +56,7 @@
                             }
                             echo '<input type="hidden" name="id" value="'.$row['ID'].'">'."\n";
                 
-                            echo '<td><input name="update" type="submit" value="Update" onClick="returnconfirmUpdate();"></td>'."\n";
+                            echo '<td><input name="update" type="submit" value="update" onClick="returnconfirmUpdate();"></td>'."\n";
                                         echo '</tr></tbody>'."\n";
                                         echo '</form>'."\n";
                                 }
