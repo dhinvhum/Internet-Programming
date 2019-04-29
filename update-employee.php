@@ -52,12 +52,6 @@
 
                 </div>         
                 
-                    <?php
-                        $index = $_POST['index'];
-                        echo $index;
-                        echo '<input type="hidden" name="index" value="'.$index.'">';
-                    ?>
-                
                 <div class="form-button">
                     
                     <button class="btn btn-success btn-sm" type="submit">Update</button>

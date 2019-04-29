@@ -18,7 +18,7 @@
         <h5>--- Employee table ---</h5><br>
 
         <?php
-            
+
             $connect = mysqli_connect("localhost", "root", "", "store");
 
                 if (!isset($update)) {
@@ -43,17 +43,20 @@
                         echo '<th scope="col">Password</th>';
                         echo '<th scope="col">Picture</th>';
                         echo '<th scope="col">Update</th>';
+                        echo '<th scope="col">Delete</th>';
                         echo '</thead></tr>';
 
                         while ($row = mysqli_fetch_array($result)) {
-                            echo '<form name="update_customer'.$row['ID'].'" method="POST" action="update-employee.php">'."\n";
+                            echo '<form name="update_customer'.$row['ID'].'" method="POST" action="session-employee.php">'."\n";
                             echo '<tbody><tr>';
                                 for ($i=0; $i<$numfields; $i++) {
                                     echo '<td>'.$row[$i].'&nbsp;</td>'."\n";
                                 }
                                 echo '<input type="hidden" name="index" value="'.$row['ID'].'">';
                                 echo '<td><input  name="update" type="submit" value="update"></td>'."\n";
+                                echo '<td><input  name="update" type="submit" value="delete"></td>'."\n";
                                 echo '</tr>';
+                                echo '<td><input  name="update" type="submit" value="insert"></td>'."\n";
                                 echo '</form>';
                         }
                         echo '</table>';

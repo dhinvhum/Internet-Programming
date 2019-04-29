@@ -2,7 +2,8 @@
 <?php
 
     //Set Index of update form
-    $index = $_POST['index'];
+    session_start();
+    $index = $_SESSION['index'];
     echo $index;
     //Set Variable of information
         $name = $_POST['UpdateEmployee-Name'];
@@ -41,6 +42,8 @@
             WHERE ID ='".$index."'";
     $result = mysqli_query($connect, $sqli);
 
+    session_destroy();
+    
     if(!$result) {
         echo mysqli_error().'<br>';
         die('Can not access database!');
