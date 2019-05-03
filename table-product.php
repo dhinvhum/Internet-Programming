@@ -15,16 +15,17 @@
 <body>
 
    <nav class="navbar navbar-light bg-light justify-content-between">
-                <a class="navbar-brand">CLOTHES SHOP</a>
+                <a class="navbar-brand">TABLE PRODUCT</a>
                 <form class="form-inline" action="login.html">
                   <button class="btn btn-outline-danger" type="submit">logout</button>
                 </form>
     </nav>
 
 
+    <br>
+
     <div class="container">
 
-        <h5>--- Product table ---</h5>
 
         <br>
 
@@ -65,7 +66,7 @@
                             }
                             echo '<input type="hidden" name="id" value="'.$row['ID'].'">'."\n";
                 
-                            echo '<td><input name="update" type="submit" value="update" onClick="returnconfirmUpdate();"></td>'."\n";
+                            echo '<td><input class="btn btn-outline-secondary" name="update" type="submit" value="update" onClick="returnconfirmUpdate();"></td>'."\n";
                                         echo '</tr></tbody>'."\n";
                                         echo '</form>'."\n";
                                 }
