@@ -13,11 +13,18 @@
     <title>Register Employee</title>
 </head>
 <body>
+
+        <nav class="navbar navbar-light bg-light justify-content-between">
+                <a class="navbar-brand">REGISTER EMPLOYEE</a>
+        </nav>
+
+        <br>
+
     <div class="container">
 
         <div class="container-form">
             
-                <h5> --- Register Employee --- </h5>
+            
 
             <form class="Register Employee" action="insert-employee-set.php" method="POST">
 
@@ -54,8 +61,8 @@
                 
                 <div class="form-button">       
 
-                    <button class="btn btn-success btn-sm" type="submit">Register</button>
-                    <input id="font-white" class="btn btn-warning btn-sm" type="button" value="Clear" onclick="reset()">  
+                    <button class="btn btn-outline-success" type="submit">Register</button>
+                    <input  class="btn btn-outline-warning" type="button" value="Clear" onclick="reset()">  
                                   
                 </div>
 
