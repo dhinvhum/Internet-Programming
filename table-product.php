@@ -13,6 +13,15 @@
     <title>Product Table</title>
 </head>
 <body>
+
+    <nav class="navbar navbar-light bg-light justify-content-between">
+                <a class="navbar-brand">CLOTHES SHOP</a>
+                <form class="form-inline" action="login.html">
+                  <button class="btn btn-outline-danger" type="submit">logout</button>
+                </form>
+    </nav>
+
+
     <div class="container">
 
         <h5>--- Product table ---</h5>
