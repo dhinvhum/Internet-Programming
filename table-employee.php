@@ -15,14 +15,20 @@
 <body>
 
     <nav class="navbar navbar-light bg-light justify-content-between">
-                <a class="navbar-brand">CLOTHES SHOP</a>
-                <form class="form-inline">
+                <a class="navbar-brand">EMPLOYEE TABLE</a>
+                <form class="form-inline" action="login.html">
                   <button class="btn btn-outline-danger" type="submit">logout</button>
                 </form>
     </nav>
 
+    <br>
+
     <div class="container">
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3daea909c6219678f951e94db802b15cb21f5632
         <?php
 
             $connect = mysqli_connect("localhost", "root", "", "store");
