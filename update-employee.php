@@ -13,6 +13,14 @@
     <title>Update Employee</title>
 </head>
 <body>
+
+    <nav class="navbar navbar-light bg-light justify-content-between">
+                <a class="navbar-brand">CLOTHES SHOP</a>
+                <form class="form-inline">
+                  <button class="btn btn-outline-danger" type="submit">logout</button>
+                </form>
+    </nav>
+
     <div class="container">
 
         <div class="container-form">
