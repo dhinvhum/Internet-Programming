@@ -8,6 +8,7 @@
     $post = $_POST['RegisterEmployee-position'];
     $pict = $_POST['RegisterEmployee-Picture'];
 
+
     //Insert information to database
     $connect = mysqli_connect("localhost", "root", "", "store");
     $sql = 'INSERT INTO employee VALUES ("","'.$name.'", "'.$surn.'", "'.$pass.'", "'.$post.'", "'.$pict.'");';

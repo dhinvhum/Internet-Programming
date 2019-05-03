@@ -23,8 +23,6 @@
 
     <div class="container">
 
-        <h5>--- Employee table ---</h5><br>
-
         <?php
 
             $connect = mysqli_connect("localhost", "root", "", "store");
@@ -39,7 +37,8 @@
                     if (!$result) {
                         echo '<b>Error </b>'.mysqli_errno().':'.mysqli_error().'<by>';
                     } else if ($numrows == 0) {
-                        echo '<b>Query executed successfully bot no row returns!</b>';
+                        echo '<b>Not have employee! </b>';
+                        echo '<input class="btn btn-outline-success" name="update" type="button" value="insert" onclick="insert_emp()">'."\n";
                     } else {
                         echo '<div class="table-responsive">';
                         echo '<table class="table">';

@@ -24,13 +24,13 @@
                 <div class="form-group">
                               
                         <label class="label">Name&nbsp:</label>
-                        <input type="text" id="RegisterEmployee-Name" class="form-control border border-secondary rounded" placeholder="Input your name" required>
+                        <input type="text" name="RegisterEmployee-Name" class="form-control border border-secondary rounded" placeholder="Input your name" required>
                         
                         <label class="label">Surname&nbsp:</label>
-                        <input type="text" id="RegisterEmployee-Surname" class="form-control border border-secondary rounded" placeholder="Input your surname" required>
+                        <input type="text" name="RegisterEmployee-Surname" class="form-control border border-secondary rounded" placeholder="Input your surname" required>
                 
                         <label class="label">Password&nbsp:</label>
-                        <input type="text" id="RegisterEmployee-Password" class="form-control border border-secondary rounded" placeholder="Password" required>
+                        <input type="text" name="RegisterEmployee-Password" class="form-control border border-secondary rounded" placeholder="Password" required>
                         <small id="emailHelp" class="form-text text-muted">Please share the password only this employee.</small>
                 </div>
 
@@ -38,7 +38,7 @@
 
                     <div class="form-group col-md-6">
                         <label class="label">Postition&nbsp:</label>
-                        <select id="RegisterEmployee-position" class="form-control border border-secondary rounded" required>
+                        <select name="RegisterEmployee-position" class="form-control border border-secondary rounded" required>
                             <option value="null">Please select</option>
                             <option value="Manager">Manager</option>
                             <option value="Cashier">Cashier</option>
@@ -47,7 +47,7 @@
 
                     <div class="form-group col-md-6">
                         <label class="label">Picture&nbsp:</label>
-                        <input type="file" id="RegisterEmployee-Picture"  required>
+                        <input type="file" name="RegisterEmployee-Picture"  required>
                     </div>
 
                 </div>                   
