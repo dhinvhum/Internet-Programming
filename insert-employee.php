@@ -13,11 +13,18 @@
     <title>Register Employee</title>
 </head>
 <body>
+
+        <nav class="navbar navbar-light bg-light justify-content-between">
+                <a class="navbar-brand">REGISTER EMPLOYEE</a>
+        </nav>
+
+        <br>
+
     <div class="container">
 
         <div class="container-form">
             
-                <h5> --- Register Employee --- </h5>
+            
 
             <form class="Register Employee" action="insert-employee-set.php" method="POST">
 
