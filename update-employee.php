@@ -15,17 +15,19 @@
 <body>
 
     <nav class="navbar navbar-light bg-light justify-content-between">
-                <a class="navbar-brand">CLOTHES SHOP</a>
+                <a class="navbar-brand">UPDATE EMPLOYEE</a>
                 <form class="form-inline" action="login.html">
                   <button class="btn btn-outline-danger" type="submit">logout</button>
                 </form>
     </nav>
 
+    <br>
+
     <div class="container">
 
         <div class="container-form">
             
-                <h5> --- Update Employee --- </h5>
+                
 
             <form class="Update Employee" action="update-employee-set.php" method="POST">
 

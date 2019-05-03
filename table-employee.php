@@ -15,15 +15,16 @@
 <body>
 
     <nav class="navbar navbar-light bg-light justify-content-between">
-                <a class="navbar-brand">CLOTHES SHOP</a>
+                <a class="navbar-brand">EMPLOYEE TABLE</a>
                 <form class="form-inline" action="login.html">
                   <button class="btn btn-outline-danger" type="submit">logout</button>
                 </form>
     </nav>
 
+    <br>
+
     <div class="container">
 
-        <h5>--- Employee table ---</h5><br>
 
         <?php
 
