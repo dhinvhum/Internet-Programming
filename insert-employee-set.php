@@ -11,7 +11,7 @@
 
     //Insert information to database
     $connect = mysqli_connect("localhost", "root", "", "store");
-    $sql = 'INSERT INTO employee VALUES ("","'.$name.'", "'.$surn.'", "'.$pass.'", "'.$post.'", "'.$pict.'");';
+    $sql = 'INSERT INTO employee VALUES ("","'.$name.'", "'.$surn.'", "'.$post.'", "'.$pass.'", "'.$pict.'");';
     $result = mysqli_query($connect, $sql);
 
     if(!$result) {
@@ -21,5 +21,6 @@
         header("location:table-employee.php");
     }
 
+    mysqli_close($connect);
     
 ?>
