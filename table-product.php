@@ -45,7 +45,7 @@
                         echo '<div class="table-responsive">';
                         echo '<table class="table">';
                         echo '<thead><tr>';
-                        echo '<th scope="col">ID</th>';
+                        echo '<th scope="col">#</th>';
                         echo '<th scope="col">Product</th>';
                         echo '<th scope="col">Size</th>';
                         echo '<th scope="col">Color</th>';
