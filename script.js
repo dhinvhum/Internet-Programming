@@ -31,13 +31,13 @@ function check_value() {
 }
 
 function employee_table() {
-    window.location.href = "table-employee.html" ;
+    window.location.href = "table-employee.php" ;
 }
 
 function product_table() {
-    window.location.href = "table-product.html";
+    window.location.href = "table-product.php";
 }
 
-function gift_table() {
-    window.location.href = "table-gift.html";
+function insert_emp() {
+    window.location.href = "insert-employee.php";
 }
