@@ -58,7 +58,7 @@
                                 echo '</tr>';
                                 echo '</form>';
                         }
-                        echo '<td><input name="update" type="button" value="insert" href="insert-employee.php"></td>'."\n";
+                        echo '<td><input name="update" type="button" value="insert" onclick="insert_emp()"></td>'."\n";
                         echo '</table>';
                     }   
             
