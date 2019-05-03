@@ -25,10 +25,6 @@
 
     <div class="container">
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 3daea909c6219678f951e94db802b15cb21f5632
         <?php
 
             $connect = mysqli_connect("localhost", "root", "", "store");

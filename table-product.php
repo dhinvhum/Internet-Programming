@@ -26,9 +26,6 @@
 
     <div class="container">
 
-
-        <br>
-
         <?php
             
             $connect = mysqli_connect("localhost", "root", "", "store");
