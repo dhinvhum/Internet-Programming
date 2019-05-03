@@ -19,7 +19,7 @@
             
                 <h5> --- Register Employee --- </h5>
 
-            <form class="Register Employee" action="" method="POST">
+            <form class="Register Employee" action="insert-employee-set.php" method="POST">
 
                 <div class="form-group">
                               

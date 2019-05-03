@@ -56,9 +56,9 @@
                                 echo '<td><input  name="update" type="submit" value="update"></td>'."\n";
                                 echo '<td><input  name="update" type="submit" value="delete"></td>'."\n";
                                 echo '</tr>';
-                                echo '<td><input  name="update" type="submit" value="insert"></td>'."\n";
                                 echo '</form>';
                         }
+                        echo '<td><input name="update" type="button" value="insert" href="insert-employee.php"></td>'."\n";
                         echo '</table>';
                     }   
             
