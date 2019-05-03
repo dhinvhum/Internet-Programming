@@ -21,17 +21,35 @@
         <br>
 
     <div class="container">
+        
+        <?php
+            $connect = mysqli_connect("localhost", "root", "", "store");
+            $sql = "SELECT Name, Password, Position FROM employee";
+            $result = mysqli_query($connect, $sql);
+            
+
+            session_start();
+            
+            while($row = mysqli_fetch_assoc($result)){
+                if (isset($_POST['Login']) && ($_POST['login-id'] == $row['Name']) && ($_POST['login-password'] == $row['Password'])) {
+                    $_SESSION['Name'] = $_POST['login-id'];
+                    header("location:check-login.php");
+                } else if (isset($_POST['Login']) && ($_POST['login-id'] != $row['Name']  || $_POST['login-password'] != $row['Password'])){
+                    echo '<script>alert("Wrong USERNAME or PASSWORD!!");</script>';
+                }
+            }
+            
+        ?>
 
         <div class="container-form">
-            
-                
+        
 
-            <form class="login">
+            <form class="login" method="POST">
 
                 <div class="form-group">
                     
-                        <label class="label">ID&nbsp:</label>
-                        <input type="text" name="login-id" class="form-control border border-secondary rounded" placeholder="Input your ID" required>
+                        <label class="label">Username&nbsp:</label>
+                        <input type="text" name="login-id" class="form-control border border-secondary rounded" placeholder="Input your Username" required>
 
                         <br>
                   
@@ -43,7 +61,7 @@
                 
                 <div class="form-button">
                     
-                    <input class="btn btn-outline-success" type="submit" value="Login" onclick="check_login()">  
+                    <button class="btn btn-outline-success" name="Login">Login</button>
                     <input class="btn btn-outline-warning" type="button" value="Clear" onclick="reset()">  
                 
                 </div>
