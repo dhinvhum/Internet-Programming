@@ -16,7 +16,7 @@
 
     <nav class="navbar navbar-light bg-light justify-content-between">
                 <a class="navbar-brand">UPDATE EMPLOYEE</a>
-                <form class="form-inline" action="login.html">
+                <form class="form-inline" action="login.php">
                   <button class="btn btn-outline-danger" type="submit">logout</button>
                 </form>
     </nav>
