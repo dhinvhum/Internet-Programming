@@ -61,8 +61,8 @@
                 
                 <div class="form-button">       
 
-                    <button class="btn btn-success btn-sm" type="submit">Register</button>
-                    <input id="font-white" class="btn btn-warning btn-sm" type="button" value="Clear" onclick="reset()">  
+                    <button class="btn btn-outline-success" type="submit">Register</button>
+                    <input  class="btn btn-outline-warning" type="button" value="Clear" onclick="reset()">  
                                   
                 </div>
 
