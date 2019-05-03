@@ -44,8 +44,8 @@
                     } else {
                         echo '<div class="table-responsive">';
                         echo '<table class="table">';
-                        echo '<thead class="thead-dark"><tr>';
-                        echo '<th scope="col">ID</th>';
+                        echo '<thead><tr>';
+                        echo '<th scope="col">#</th>';
                         echo '<th scope="col">Name</th>';
                         echo '<th scope="col">Surname</th>';
                         echo '<th scope="col">Position</th>';
@@ -62,12 +62,12 @@
                                     echo '<td>'.$row[$i].'&nbsp;</td>'."\n";
                                 }
                                 echo '<input type="hidden" name="index" value="'.$row['ID'].'">';
-                                echo '<td><input  name="update" type="submit" value="update"></td>'."\n";
-                                echo '<td><input  name="update" type="submit" value="delete"></td>'."\n";
+                                echo '<td><input  class="btn btn-outline-primary" name="update" type="submit" value="update"></td>'."\n";
+                                echo '<td><input  class="btn btn-outline-warning" name="update" type="submit" value="delete"></td>'."\n";
                                 echo '</tr>';
                                 echo '</form>';
                         }
-                        echo '<td><input name="update" type="button" value="insert" onclick="insert_emp()"></td>'."\n";
+                        echo '<td><input name="update" class="btn btn-outline-success" type="button" value="insert" onclick="insert_emp()"></td>'."\n";
                         echo '</table>';
                     }   
             

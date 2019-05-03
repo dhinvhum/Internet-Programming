@@ -44,7 +44,7 @@
                     } else {
                         echo '<div class="table-responsive">';
                         echo '<table class="table">';
-                        echo '<thead class="thead-dark"><tr>';
+                        echo '<thead><tr>';
                         echo '<th scope="col">ID</th>';
                         echo '<th scope="col">Product</th>';
                         echo '<th scope="col">Size</th>';
@@ -63,7 +63,7 @@
                             }
                             echo '<input type="hidden" name="id" value="'.$row['ID'].'">'."\n";
                 
-                            echo '<td><input class="btn btn-outline-secondary" name="update" type="submit" value="update" onClick="returnconfirmUpdate();"></td>'."\n";
+                            echo '<td><input class="btn btn-outline-primary" name="update" type="submit" value="update" onClick="returnconfirmUpdate();"></td>'."\n";
                                         echo '</tr></tbody>'."\n";
                                         echo '</form>'."\n";
                                 }
