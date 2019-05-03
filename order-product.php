@@ -21,6 +21,8 @@
                 </form>
             </nav>
 
+            <br>
+
     <div class="container">
 
         <div class="container-form">
@@ -94,7 +96,7 @@
                             echo '<div class="form-button">';
                                 echo '<button class="btn btn-outline-success" type="submit" onclick="confirmbox()">Register</button>';
                                 echo '.&nbsp.';
-                                echo '<input  class="btn btn-outline-warning" type="button" value="Clear" onclick="reset()">';
+                                echo '<input class="btn btn-outline-warning" type="button" value="Clear" onclick="reset()">';
                             echo '</div>';
 
                         echo '</form>';
