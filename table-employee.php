@@ -16,7 +16,7 @@
 
     <nav class="navbar navbar-light bg-light justify-content-between">
         <a class="navbar-brand">TABLE EMPLOYEE</a>
-            <form class="form-inline" action="manager.html">
+            <form class="form-inline" action="login.php">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <button class="btn btn-outline-warning" onclick="goBack()">back</button>

@@ -19,7 +19,7 @@ function product_table() {
 }
 
 function report() {
-    window.location.href = "report.html"
+    window.location.href = "report.php"
 }
 
 function insert_emp() {

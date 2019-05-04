@@ -27,14 +27,11 @@
                   </div>
                </form>
     </nav>
-
-
     <br>
-
     <div class="container">
 
         <?php
-            
+            session_start();
             $connect = mysqli_connect("localhost", "root", "", "store");
 
                 if (!isset($update)) {
@@ -61,15 +58,16 @@
                         echo '</thead></tr>';
 
                         while($row = mysqli_fetch_array($result)){
-                            echo '<form name="update_product'.$row['ID'].'" method="post" action="update-product">'."\n";
+                            echo '<form name="update_product'.$row['ID'].'" method="post" action="update-product.php">'."\n";
                         
                             echo '<tbody><tr>';
                                 for($i=0;$i<$numfields;$i++){
                                 echo '<td>'.$row[$i].'&nbsp;</td>'."\n";									
                             }
+                            
                             echo '<input type="hidden" name="id" value="'.$row['ID'].'">'."\n";
-                
-                            echo '<td><input class="btn btn-outline-primary" name="update" type="submit" value="update" onClick="returnconfirmUpdate();"></td>'."\n";
+                            
+                            echo '<td><input class="btn btn-outline-primary" name="update" type="submit" value="update"></td>'."\n";
                                         echo '</tr></tbody>'."\n";
                                         echo '</form>'."\n";
                                 }
