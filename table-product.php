@@ -16,16 +16,16 @@
 
    <nav class="navbar navbar-light bg-light justify-content-between">
                 <a class="navbar-brand">TABLE PRODUCT</a>
-                <form class="form-inline" action="login.php">
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <input type="button" class="btn btn-outline-warning" value="back">
-                    </div>
-                    <div class="form-group col-md-6">
+                <form class="form-inline" action="manager.html">
+                  <div class="form-row">
+                     <div class="form-group col-md-6">
+                        <button class="btn btn-outline-warning" onclick="goBack()">back</button>
+                     </div>
+                     <div class="form-group col-md-6">
                         <button class="btn btn-outline-danger" type="submit">logout</button>
-                    </div>
-                </div>
-                </form>
+                     </div>
+                  </div>
+               </form>
     </nav>
 
 

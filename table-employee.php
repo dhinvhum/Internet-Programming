@@ -16,10 +16,10 @@
 
     <nav class="navbar navbar-light bg-light justify-content-between">
         <a class="navbar-brand">EMPLOYEE TABLE</a>
-            <form class="form-inline" action="login.php">
+            <form class="form-inline" action="manager.html">
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <input type="button" class="btn btn-outline-warning" value="back">
+                        <button class="btn btn-outline-warning" onclick="goBack()">back</button>
                     </div>
                     <div class="form-group col-md-6">
                         <button class="btn btn-outline-danger" type="submit">logout</button>
