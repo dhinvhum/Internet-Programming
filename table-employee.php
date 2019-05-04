@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <!-- Style -->
@@ -15,10 +15,17 @@
 <body>
 
     <nav class="navbar navbar-light bg-light justify-content-between">
-                <a class="navbar-brand">EMPLOYEE TABLE</a>
-                <form class="form-inline" action="login.php">
-                  <button class="btn btn-outline-danger" type="submit">logout</button>
-                </form>
+        <a class="navbar-brand">EMPLOYEE TABLE</a>
+            <form class="form-inline" action="login.php">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input type="button" class="btn btn-outline-warning" value="back">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <button class="btn btn-outline-danger" type="submit">logout</button>
+                    </div>
+                </div>
+            </form>
     </nav>
 
     <br>
@@ -39,7 +46,7 @@
                         </select>
                     </div>
                     <div class="form-group col-md-2">
-                        <button class="btn btn-outline-warning" type="submit">Search</button>
+                        <button class="btn btn-outline-secondary" type="submit">Search</button>
                     </div>
                 </div>
             </form>
@@ -72,7 +79,7 @@
                         echo '<b>Not have employee! </b>';
                         echo '<input class="btn btn-outline-success" name="update" type="button" value="insert" onclick="insert_emp()">'."\n";
                     } else {
-                        echo '<div class="table-responsive">';
+                        echo '<div class="table">';
                         echo '<table class="table">';
                         echo '<thead><tr>';
                         echo '<th scope="col">#</th>';
