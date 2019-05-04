@@ -25,14 +25,44 @@
 
     <div class="container">
 
+        <div class="container-form">
+
+            <form class="Update Employee" method="POST">
+
+                <div class="form-row">
+
+                    <div class="form-group col-md-10">
+                        <select name="selectposition" class="form-control border border-secondary rounded" require>
+                            <option value="">All Position</option>
+                            <option value="Manager">Manager</option>
+                            <option value="Cashier">Cashier</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <button class="btn btn-outline-warning" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
         <?php
 
             $connect = mysqli_connect("localhost", "root", "", "store");
 
                 if (!isset($update)) {
 
-                    $sql = 'SELECT * FROM employee';
-                    $result = mysqli_query($connect, $sql);
+                    if ($_POST['selectposition']=="") {
+                        $sql = 'SELECT * FROM employee';
+                        $result = mysqli_query($connect, $sql);
+                    } else if ($_POST['selectposition']=="Manager") {
+                        $sql = 'SELECT * FROM employee WHERE Position="Manager" ORDER BY ID';
+                        $result = mysqli_query($connect, $sql);
+                    } else {
+                        $sql = 'SELECT * FROM employee WHERE Position="Cashier" ORDER BY ID';
+                        $result = mysqli_query($connect, $sql);
+                    }
+
                     $numrows = mysqli_num_rows($result);
                     $numfields = mysqli_num_fields($result);
 

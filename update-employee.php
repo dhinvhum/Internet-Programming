@@ -26,8 +26,6 @@
     <div class="container">
 
         <div class="container-form">
-            
-                
 
             <form class="Update Employee" action="update-employee-set.php" method="POST">
 
@@ -72,7 +70,6 @@
             </form>
                             
         </div>
-
 
     </div>
 

@@ -18,6 +18,10 @@ function product_table() {
     window.location.href = "table-product.php";
 }
 
+function report() {
+    window.location.href = "report.html"
+}
+
 function insert_emp() {
     window.location.href = "insert-employee.php";
 }
