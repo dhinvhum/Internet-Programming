@@ -13,8 +13,8 @@
     $I9 = $_POST['ID9'];
     $I10 = $_POST['ID10'];
 
-    echo $I1;
         $connect = mysqli_connect("localhost", "root", "", "store");
+        $connect2 = mysqli_connect("localhost", "root", "", "report");
         $sql = "SELECT * FROM product";
         $result = mysqli_query($connect, $sql);
 
@@ -22,6 +22,14 @@
             if($row['ID']=='1') {
                 $sql1 = 'UPDATE product SET Quantity=Quantity-"'.$I1.'" WHERE ID = "'.$row['ID'].'" ';
                 $result1 = mysqli_query($connect, $sql1);
+                if($I1>0) {
+                    $price = $row['Price']*$I1;
+                    $date = date("Y-m-d");
+                    echo $I1;
+                    echo $date;
+                    $sql2 = 'INSERT INTO daily report VALUES = "'.$date.'", "'.$row['Sweater'].'", "'.$row['Price'].'", "'.$I1.'", "'.$price.'" ';
+                    $result2 = mysqli_query($connect2, $sql2);
+                }
             }
             if($row['ID']=='2') {
                 $sql1 = 'UPDATE product SET Quantity=Quantity-"'.$I2.'" WHERE ID = "'.$row['ID'].'" ';
@@ -62,7 +70,7 @@
             
         }
 
-            header("location:order-product.php"); 
+            // header("location:order-product.php"); 
     
     mysqli_close($connect);
 
