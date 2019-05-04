@@ -14,7 +14,6 @@
     $I10 = $_POST['ID10'];
 
         $connect = mysqli_connect("localhost", "root", "", "store");
-        $connect2 = mysqli_connect("localhost", "root", "", "report");
         $sql = "SELECT * FROM product";
         $result = mysqli_query($connect, $sql);
 
@@ -25,52 +24,104 @@
                 if($I1>0) {
                     $price = $row['Price']*$I1;
                     $date = date("Y-m-d");
-                    echo $I1;
-                    echo $date;
-                    $sql2 = 'INSERT INTO daily report VALUES = "'.$date.'", "'.$row['Sweater'].'", "'.$row['Price'].'", "'.$I1.'", "'.$price.'" ';
-                    $result2 = mysqli_query($connect2, $sql2);
+                    $sqli = 'INSERT INTO report VALUES ("'.$date.'","'.$row['Sweater'].'", "'.$row['Price'].'", "'.$I1.'", "'.$price.'")';
+                    $resultii = mysqli_query($connect, $sqli);
                 }
             }
             if($row['ID']=='2') {
                 $sql1 = 'UPDATE product SET Quantity=Quantity-"'.$I2.'" WHERE ID = "'.$row['ID'].'" ';
                 $result1 = mysqli_query($connect, $sql1);
+                if($I2>0) {
+                    $price = $row['Price']*$I2;
+                    $date = date("Y-m-d");
+                    $sqli = 'INSERT INTO report VALUES ("'.$date.'","'.$row['Sweater'].'", "'.$row['Price'].'", "'.$I2.'", "'.$price.'")';
+                    $resultii = mysqli_query($connect, $sqli);
+                }
             }
             if($row['ID']=='3') {
                 $sql1 = 'UPDATE product SET Quantity=Quantity-"'.$I3.'" WHERE ID = "'.$row['ID'].'" ';
                 $result1 = mysqli_query($connect, $sql1);
+                if($I3>0) {
+                    $price = $row['Price']*$I3;
+                    $date = date("Y-m-d");
+                    $sqli = 'INSERT INTO report VALUES ("'.$date.'","'.$row['Sweater'].'", "'.$row['Price'].'", "'.$I3.'", "'.$price.'")';
+                    $resultii = mysqli_query($connect, $sqli);
+                }
             }
             if($row['ID']=='4') {
                 $sql1 = 'UPDATE product SET Quantity=Quantity-"'.$I4.'" WHERE ID = "'.$row['ID'].'" ';
                 $result1 = mysqli_query($connect, $sql1);
+                if($I4>0) {
+                    $price = $row['Price']*$I4;
+                    $date = date("Y-m-d");
+                    $sqli = 'INSERT INTO report VALUES ("'.$date.'","'.$row['Sweater'].'", "'.$row['Price'].'", "'.$I4.'", "'.$price.'")';
+                    $resultii = mysqli_query($connect, $sqli);
+                }
             }
             if($row['ID']=='5') {
                 $sql1 = 'UPDATE product SET Quantity=Quantity-"'.$I5.'" WHERE ID = "'.$row['ID'].'" ';
                 $result1 = mysqli_query($connect, $sql1);
+                if($I5>0) {
+                    $price = $row['Price']*$I5;
+                    $date = date("Y-m-d");
+                    $sqli = 'INSERT INTO report VALUES ("'.$date.'","'.$row['Sweater'].'", "'.$row['Price'].'", "'.$I5.'", "'.$price.'")';
+                    $resultii = mysqli_query($connect, $sqli);
+                }
             }
             if($row['ID']=='6') {
                 $sql1 = 'UPDATE product SET Quantity=Quantity-"'.$I6.'" WHERE ID = "'.$row['ID'].'" ';
                 $result1 = mysqli_query($connect, $sql1);
+                if($I6>0) {
+                    $price = $row['Price']*$I6;
+                    $date = date("Y-m-d");
+                    $sqli = 'INSERT INTO report VALUES ("'.$date.'","'.$row['Sweater'].'", "'.$row['Price'].'", "'.$I6.'", "'.$price.'")';
+                    $resultii = mysqli_query($connect, $sqli);
+                }
             }
             if($row['ID']=='7') {
                 $sql1 = 'UPDATE product SET Quantity=Quantity-"'.$I7.'" WHERE ID = "'.$row['ID'].'" ';
                 $result1 = mysqli_query($connect, $sql1);
+                if($I7>0) {
+                    $price = $row['Price']*$I7;
+                    $date = date("Y-m-d");
+                    $sqli = 'INSERT INTO report VALUES ("'.$date.'","'.$row['Sweater'].'", "'.$row['Price'].'", "'.$I7.'", "'.$price.'")';
+                    $resultii = mysqli_query($connect, $sqli);
+                }
             }
             if($row['ID']=='8') {
                 $sql1 = 'UPDATE product SET Quantity=Quantity-"'.$I8.'" WHERE ID = "'.$row['ID'].'" ';
                 $result1 = mysqli_query($connect, $sql1);
+                if($I8>0) {
+                    $price = $row['Price']*$I8;
+                    $date = date("Y-m-d");
+                    $sqli = 'INSERT INTO report VALUES ("'.$date.'","'.$row['Sweater'].'", "'.$row['Price'].'", "'.$I8.'", "'.$price.'")';
+                    $resultii = mysqli_query($connect, $sqli);
+                }
             }
             if($row['ID']=='9') {
                 $sql1 = 'UPDATE product SET Quantity=Quantity-"'.$I9.'" WHERE ID = "'.$row['ID'].'" ';
                 $result1 = mysqli_query($connect, $sql1);
+                if($I9>0) {
+                    $price = $row['Price']*$I9;
+                    $date = date("Y-m-d");
+                    $sqli = 'INSERT INTO report VALUES ("'.$date.'","'.$row['Sweater'].'", "'.$row['Price'].'", "'.$I9.'", "'.$price.'")';
+                    $resultii = mysqli_query($connect, $sqli);
+                }
             }
             if($row['ID']=='10') {
                 $sql1 = 'UPDATE product SET Quantity=Quantity-"'.$I10.'" WHERE ID = "'.$row['ID'].'" ';
                 $result1 = mysqli_query($connect, $sql1);
+                if($I10>0) {
+                    $price = $row['Price']*$I10;
+                    $date = date("Y-m-d");
+                    $sqli = 'INSERT INTO report VALUES ("'.$date.'","'.$row['Sweater'].'", "'.$row['Price'].'", "'.$I10.'", "'.$price.'")';
+                    $resultii = mysqli_query($connect, $sqli);
+                }
             }
             
         }
 
-            // header("location:order-product.php"); 
+            header("location:order-product.php"); 
     
     mysqli_close($connect);
 
