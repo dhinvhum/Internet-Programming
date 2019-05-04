@@ -14,94 +14,52 @@
 </head>
 <body>
 
-            <nav class="navbar navbar-light bg-light justify-content-between">
-                <a class="navbar-brand">ORDER PRODUCT</a>
-                <form class="form-inline" action="login.php">
-                  <button class="btn btn-outline-danger" type="submit">logout</button>
-                </form>
-            </nav>
-
-            <br>
+<nav class="navbar navbar-light bg-light justify-content-between">
+        <a class="navbar-brand">ORDER PRODUCT</a>
+            <form class="form-inline" action="login.php">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <button class="btn btn-outline-danger" type="submit">logout</button>
+                    </div>
+                </div>
+            </form>
+    </nav>
 
     <div class="container">
 
         <div class="container-form">
 
+    <form class="Update Employee" method="POST">
+
+        <div class="form-row">
+
+            <div class="form-group col-md-10">
+                <select name="selectposition" class="form-control border border-secondary rounded" require>
+                    <option value="">All Product</option>
+                    <option value="Manager">Sweater</option>
+                    <option value="Cashier">Pattern Sweater</option>
+                    <option value="Cashier">Cashier</option>
+                    <option value="Cashier">Cashier</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2">
+                <button class="btn btn-outline-secondary" type="submit">Search</button>
+            </div>
+        </div>
+    </form>
+
+        </div>
+
+        <div class="container-form">
+
         
                 <?php
+
                     $connect = mysqli_connect("localhost", "root", "", "store");
-                    $sql = 'SELECT * FROM type';
-                    $result = mysqli_query($connect, $sql);
-                    $sql2 = 'SELECT * FROM size';
-                    $result2 = mysqli_query($connect, $sql2);
-                    $sql3 = 'SELECT * FROM color';
-                    $result3 = mysqli_query($connect, $sql3);
+                    $sql = 'SELECT * FROM product';
 
-                    if(!$result) {
-                        echo mysqli_error.'<br>';
-                        die('Can not access database!');
-                    } else {
-                        echo '<form class="Register Employee" action="order-product-set.php" method="POST">';
-
-                            echo '<div class="form-group">';
-                            //SHIRT
-                            echo '<label class="label">Shirt&nbsp:</label>';
-                                echo '<select name="shirt" class="form-control border border-secondary rounded" required>';
-                                    while($row = mysqli_fetch_assoc($result)) {
-                                        echo '<div class="form-group">
-                                            <option value="'.$row['Type'].'">'.$row['Type'].'</option>
-                                        ';
-                                    }
-                                echo '</select>';
-                            echo '</div>';
-
-                            echo '<div class="form-row">';
-
-                            //Size
-                            echo '<div class="form-group col-md-4">';
-                            echo '<label class="label">Size&nbsp:</label>';
-                                echo '<select name="size" class="form-control border border-secondary rounded" required>';
-
-                                    while($row = mysqli_fetch_assoc($result2)) {
-                                        echo '<div class="form-group">
-                                            <option value="'.$row['Size'].'">'.$row['Size'].'</option>
-                                        ';
-                                    }
-                        
-                                echo '</select>';
-                            echo '</div>';
-                            
-                            //Color
-                            echo '<div class="form-group col-md-4">';
-                            echo '<label class="label">Color&nbsp:</label>';
-                                echo '<select name="color" class="form-control border border-secondary rounded" required>';
-
-                                    while($row = mysqli_fetch_assoc($result3)) {
-                                        echo '<div class="form-group">
-                                            <option value="'.$row['Color'].'">'.$row['Color'].'</option>
-                                        ';
-                                    }
-                        
-                                echo '</select>';
-                            echo '</div>';
-
-                            //Quantity
-                            echo '<div class="form-group col-md-4">';
-                            echo '<label class="label">Quantity&nbsp:</label>';
-                                echo '<input type="number" name="quan"  value=1 min=1  class="form-control border border-secondary rounded" required>';
-                            echo '</div>';
-
-                            echo '</div>';
-
-                            echo '<div class="form-button">';
-                                echo '<button class="btn btn-outline-success" type="submit" onclick="confirmbox()">Register</button>';
-                                echo '.&nbsp.';
-                                echo '<input class="btn btn-outline-warning" type="button" value="Clear" onclick="reset()">';
-                            echo '</div>';
-
-                        echo '</form>';
-                    }
-
+                    
+                    
                     mysqli_close($connect);
                 ?>
             
