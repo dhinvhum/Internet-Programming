@@ -46,7 +46,7 @@
                         </select>
                     </div>
                     <div class="form-group col-md-2">
-                        <button class="btn btn-outline-secondary" type="submit">Search</button>
+                        <button class="btn btn-outline-secondary" name="select" type="submit">Search</button>
                     </div>
                 </div>
             </form>
@@ -57,7 +57,7 @@
 
             $connect = mysqli_connect("localhost", "root", "", "store");
 
-                if (!isset($update)) {
+                if (isset($_POST['select'])) {
 
                     if ($_POST['selectposition']=="") {
                         $sql = 'SELECT * FROM employee';
@@ -68,7 +68,11 @@
                     } else {
                         $sql = 'SELECT * FROM employee WHERE Position="Cashier" ORDER BY ID';
                         $result = mysqli_query($connect, $sql);
-                    }
+                    } 
+                } else {
+                    $sql = 'SELECT * FROM employee ORDER BY ID';
+                    $result = mysqli_query($connect, $sql);
+                }
 
                     $numrows = mysqli_num_rows($result);
                     $numfields = mysqli_num_fields($result);
@@ -107,7 +111,7 @@
                         echo '</table>';
                     }   
             
-                }
+                
 
         ?>
 
