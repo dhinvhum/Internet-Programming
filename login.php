@@ -26,7 +26,6 @@
             $connect = mysqli_connect("localhost", "root", "", "store");
             $sql = "SELECT Name, Password, Position FROM employee";
             $result = mysqli_query($connect, $sql);
-            
 
             session_start();
             

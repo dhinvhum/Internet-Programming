@@ -24,46 +24,82 @@
                 </div>
             </form>
     </nav>
-
+    
     <div class="container">
 
         <div class="container-form">
 
-    <form class="Update Employee" method="POST">
+            <form class="Update Employee" method="POST">
 
-        <div class="form-row">
+                <div class="form-row">
 
-            <div class="form-group col-md-10">
-                <select name="selectposition" class="form-control border border-secondary rounded" require>
-                    <option value="">All Product</option>
-                    <option value="Manager">Sweater</option>
-                    <option value="Cashier">Pattern Sweater</option>
-                    <option value="Cashier">Cashier</option>
-                    <option value="Cashier">Cashier</option>
-                </select>
-            </div>
-            <div class="form-group col-md-2">
-                <button class="btn btn-outline-secondary" type="submit">Search</button>
-            </div>
-        </div>
-    </form>
+                    <div class="form-group col-md-10">
+                        <input type="text" name="selectposition" class="form-control border border-secondary rounded" require>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <button class="btn btn-outline-secondary" type="submit" name="type">Search</button>
+                    </div>
+                </div>
+            </form>
 
         </div>
 
-        <div class="container-form">
+        <?php
+
+        $connect = mysqli_connect("localhost", "root", "", "store");
+
+        if (isset($_POST['type'])){
+                $sweater = $_POST['selectposition'];
+                $sql = "SELECT * FROM product WHERE Sweater LIKE '%$sweater%' ORDER BY ID ";
+                $result = mysqli_query($connect, $sql);
+        } else {
+            $sql = 'SELECT * FROM product ORDER BY ID';
+            $result = mysqli_query($connect, $sql);
+        }
+
+        $numrows = mysqli_num_rows($result);
+        $numfields = mysqli_num_fields($result);
+
+        if (!$result) {
+            echo '<b>Error </b>'.mysqli_errno().':'.mysqli_error().'<by>';
+        } else if ($numrows == 0) {
+            echo '<b>Not have product! </b>';
+        } else {
+            echo '<div class="table">';
+            echo '<table class="table">';
+            echo '<thead><tr>';
+            echo '<th scope="col">#</th>';
+            echo '<th scope="col">Product</th>';
+            echo '<th scope="col">Price</th>';
+            echo '<th scope="col">Enough</th>';
+            echo '<th scope="col">Quantity</th>';
+            echo '</thead></tr>';
+
+            echo '<form name="order" method="POST" action="order-product-set.php">';
+            while ($row = mysqli_fetch_array($result)) {
+                
+                echo '<tbody><tr>';
+                    for ($i=0; $i<$numfields; $i++) {
+                        echo '<td>'.$row[$i].'&nbsp;</td>'."\n";
+                    }
+
+                    echo '<td><input type="number" value=0 name="price'.$row['ID'].'"min=0 max='.$row['Quantity'].' style="width:60px;" class="form-control border border-secondary rounded"></td>';
+                    echo '</tr>';
+                    
+            }
+        
+            echo '</table>';
+            echo '<div class="form-button">';
+            echo '<input class="btn btn-outline-primary" name="update" type="submit" value="Order">'."\n";
+            echo '<input class="btn btn-outline-warning" type="button" value="Clear" onclick="reset()">';
+            echo '</div>';
+            echo '</form>';
+        
+        }   
 
         
-                <?php
 
-                    $connect = mysqli_connect("localhost", "root", "", "store");
-                    $sql = 'SELECT * FROM product';
-
-                    
-                    
-                    mysqli_close($connect);
-                ?>
-            
-                </div>                   
+    ?>                
                 
                 
 
