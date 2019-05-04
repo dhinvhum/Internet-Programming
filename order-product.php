@@ -83,7 +83,7 @@
                         echo '<td>'.$row[$i].'&nbsp;</td>'."\n";
                     }
 
-                    echo '<td><input type="number" value=0 name="price'.$row['ID'].'"min=0 max='.$row['Quantity'].' style="width:60px;" class="form-control border border-secondary rounded"></td>';
+                    echo '<td><input type="number" value=0 name="ID'.$row['ID'].'"min=0 max='.$row['Quantity'].' style="width:60px;" class="form-control border border-secondary rounded"></td>';
                     echo '</tr>';
                     
             }
