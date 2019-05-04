@@ -42,24 +42,13 @@
                         <label class="label">Password&nbsp:</label>
                         <input type="text" name="RegisterEmployee-Password" class="form-control border border-secondary rounded" placeholder="Password" required>
                         <small id="emailHelp" class="form-text text-muted">Please share the password only this employee.</small>
-                </div>
 
-                <div class="form-row">
-
-                    <div class="form-group col-md-6">
                         <label class="label">Postition&nbsp:</label>
                         <select name="RegisterEmployee-position" class="form-control border border-secondary rounded" required>
                             <option value="null">Please select</option>
                             <option value="Manager">Manager</option>
                             <option value="Cashier">Cashier</option>
                         </select>
-                    </div>
-
-                    <div class="form-group col-md-6">
-                        <label class="label">Picture&nbsp:</label>
-                        <input type="file" name="RegisterEmployee-Picture"  required>
-                    </div>
-
                 </div>                   
                 
                 <div class="form-button">       

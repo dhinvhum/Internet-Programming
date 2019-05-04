@@ -15,7 +15,7 @@
 <body>
 
     <nav class="navbar navbar-light bg-light justify-content-between">
-        <a class="navbar-brand">EMPLOYEE TABLE</a>
+        <a class="navbar-brand">TABLE EMPLOYEE</a>
             <form class="form-inline" action="manager.html">
                 <div class="form-row">
                     <div class="form-group col-md-6">
@@ -87,7 +87,6 @@
                         echo '<th scope="col">Surname</th>';
                         echo '<th scope="col">Position</th>';
                         echo '<th scope="col">Password</th>';
-                        echo '<th scope="col">Picture</th>';
                         echo '<th scope="col">Update</th>';
                         echo '<th scope="col">Delete</th>';
                         echo '</thead></tr>';

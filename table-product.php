@@ -54,10 +54,9 @@
                         echo '<thead><tr>';
                         echo '<th scope="col">#</th>';
                         echo '<th scope="col">Product</th>';
-                        echo '<th scope="col">Size</th>';
-                        echo '<th scope="col">Color</th>';
                         echo '<th scope="col">Price</th>';
                         echo '<th scope="col">Quantity</th>';
+                        echo '<th scope="col">Type</th>';
                         echo '<th scope="col">Update</th>';
                         echo '</thead></tr>';
 
