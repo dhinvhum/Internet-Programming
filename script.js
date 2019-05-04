@@ -25,3 +25,7 @@ function report() {
 function insert_emp() {
     window.location.href = "insert-employee.php";
 }
+
+function manager() {
+    window.location.href = "manager.html";
+}
