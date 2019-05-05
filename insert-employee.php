@@ -14,14 +14,19 @@
 </head>
 <body>
 
-        <nav class="navbar navbar-light bg-light justify-content-between">
-                <a class="navbar-brand">REGISTER EMPLOYEE</a>
-                <form class="form-inline" action="login.php">
-                  <button class="btn btn-outline-danger" type="submit">logout</button>
-                </form>
-        </nav>
-
-        <br>
+    <nav class="navbar navbar-light bg-light justify-content-between">
+        <a class="navbar-brand">INSERT EMPLOYEE</a>
+            <form class="form-inline" action="login.php">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input type="button" class="btn btn-outline-warning" onclick="employee_table()" value="back">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <button class="btn btn-outline-danger" type="submit">logout</button>
+                    </div>
+                </div>
+            </form>
+    </nav>
 
     <div class="container">
 

@@ -15,18 +15,29 @@
 <body>
 
     <nav class="navbar navbar-light bg-light justify-content-between">
-                <a class="navbar-brand">UPDATE EMPLOYEE</a>
-                <form class="form-inline" action="login.php">
-                  <button class="btn btn-outline-danger" type="submit">logout</button>
-                </form>
+        <a class="navbar-brand">UPDATE EMPLOYEE</a>
+            <form class="form-inline" action="login.php">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input type="button" class="btn btn-outline-warning" onclick="employee_table()" value="back">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <button class="btn btn-outline-danger" type="submit">logout</button>
+                    </div>
+                </div>
+            </form>
     </nav>
 
     <br>
-
+    
     <div class="container">
 
         <div class="container-form">
-
+                <?php
+                    echo '<p>UPDATE INFORMATION OF ID '; 
+                    session_start();
+                    echo  $_SESSION['index'].'</p>';
+                ?>
             <form class="Update Employee" action="update-employee-set.php" method="POST">
 
                 <div class="form-group">
@@ -40,30 +51,20 @@
                         <label class="label">Password&nbsp:</label>
                         <input type="text" name="UpdateEmployee-Password" class="form-control border border-secondary rounded" placeholder="Password" require>
                         <small id="emailHelp" class="form-text text-muted">Please share the password only this employee.</small>
-                </div>
 
-                <div class="form-row">
-
-                    <div class="form-group col-md-6">
                         <label class="label">Postition&nbsp:</label>
                         <select name="UpdateEmployee-position" class="form-control border border-secondary rounded" require>
                             <option value="">Please select</option>
                             <option value="Manager">Manager</option>
                             <option value="Cashier">Cashier</option>
                         </select>
-                    </div>
-
-                    <div class="form-group col-md-6">
-                        <label class="label">Picture&nbsp:</label>
-                        <input type="file" name="UpdateEmployee-Picture" require>
-                    </div>
-
-                </div>         
+                        
+                </div>     
                 
                 <div class="form-button">
                     
-                    <button class="btn btn-success btn-sm" type="submit">Update</button>
-                    <input id="font-white" class="btn btn-warning btn-sm" type="button" value="Clear" onclick="reset()">  
+                    <button class="btn btn-outline-success " type="submit">Update</button>
+                    <input  class="btn btn-outline-warning " type="button" value="Clear" onclick="reset()">  
                     
                 </div>
 

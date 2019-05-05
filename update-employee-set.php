@@ -30,19 +30,15 @@
         if ($pass=="") {
             $pass = $row['Password'];
         }
-        if ($pic=="") {
-            $pic = $row['Picture'];
-        }
     }
  
     //Update information to database
-    $connect = mysqli_connect("localhost", "root", "", "store");
     $sqli = "UPDATE employee 
-            SET Name='".$name."', Surname='".$sur."', Position='".$post."', Password='".$pass."', Picture='".$pic."'
+            SET Name='".$name."', Surname='".$sur."', Position='".$post."', Password='".$pass."'
             WHERE ID ='".$index."'";
     $result = mysqli_query($connect, $sqli);
 
-    session_destroy();
+    // session_destroy();
     
     if(!$result) {
         echo mysqli_error().'<br>';

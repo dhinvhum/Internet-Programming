@@ -37,17 +37,17 @@
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <form class="Daily Report" method="POST">
-                        <button class="btn btn-primary" name="daily" type="submit">Daily</button>
+                        <button class="btn btn-primary btn-lg" name="daily" type="submit">Daily</button>
                     </form>
                 </div>
                 <div class="form-group col-md-4">
                     <form class="Mountly Report" method="POST">
-                        <button class="btn btn-warning" name="mountly" type="submit">Mounly</button>
+                        <button class="btn btn-warning btn-lg" name="mountly" type="submit">Mounly</button>
                     </form>
                 </div>
                 <div class="form-group col-md-4">
                     <form class="Yearly Report" method="POST">
-                        <button class="btn btn-danger" name="yearly" type="submit">Yearly</button>
+                        <button class="btn btn-danger btn-lg" name="yearly" type="submit">Yearly</button>
                     </form>
                 </div>
             </div>
@@ -55,7 +55,8 @@
         </div>
 
         <?php
-
+            
+            $totalprice = 0;
             $year = date("Y");
             $month = date("Y-m");
             $day = date("Y-m-d");
@@ -65,15 +66,15 @@
                 if (isset($_POST['daily'])) {
                     $sql = 'SELECT * FROM report WHERE Date LIKE "'.$day.'" ';
                     $result = mysqli_query($connect, $sql);
-                    echo $day;
+                    echo '<p>Date : '.$day.'</p>';
                 } else if (isset($_POST['mountly'])){
                     $sql = 'SELECT * FROM report WHERE Date LIKE "'.$month.'%" ';
-                    echo $month;
+                    echo '<p>Month : '.$month.'</p>';
                     $result = mysqli_query($connect, $sql);
                 }else if (isset($_POST['yearly'])){
                     $sql = 'SELECT * FROM report WHERE Date LIKE "'.$year.'%" ';
                     $result = mysqli_query($connect, $sql);
-                    echo $year;
+                    echo '<p>Year : '.$year.'</p>';
                 }else {
                     $sql = 'SELECT * FROM report WHERE Date LIKE "'.$day.'" ';
                     $result = mysqli_query($connect, $sql);
@@ -103,9 +104,15 @@
                             echo '<tbody><tr>';
                                 for ($i=0; $i<$numfields; $i++) {
                                     echo '<td>'.$row[$i].'&nbsp;</td>'."\n";
+                                    $totalprice = $totalprice+$row['Price'];
+                                    
                                 }
                                 echo '</tr>';
+                                
                         }
+                                echo '<tr>';
+                                echo '<td colspan="4" >AGGREGATE</td><td>'.$totalprice.'</td>';
+                                echo '</tr>';
                         echo '</table>';
                     }   
         ?>
