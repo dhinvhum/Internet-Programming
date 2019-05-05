@@ -23,6 +23,8 @@
     <div class="container">
         
         <?php
+
+            $alertcheck = true;
             $connect = mysqli_connect("localhost", "root", "", "store");
             $sql = "SELECT Name, Password, Position FROM employee";
             $result = mysqli_query($connect, $sql);
@@ -34,10 +36,13 @@
                     $_SESSION['Name'] = $_POST['login-id'];
                     header("location:check-login.php");
                 } else if (isset($_POST['Login']) && ($_POST['login-id'] != $row['Name']  || $_POST['login-password'] != $row['Password'])){
-                    echo '<script>alert("Wrong USERNAME or PASSWORD!!");</script>';
+                    $alertcheck = false;
                 }
             }
             
+            if (!$alertcheck) {
+                echo '<script>alert("Wrong USERNAME or PASSWORD!!");</script>';
+            }
         ?>
 
         <div class="container-form">
