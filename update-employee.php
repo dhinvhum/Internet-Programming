@@ -63,7 +63,7 @@
                 
                 <div class="form-button">
                     
-                    <button class="btn btn-outline-success " type="submit">Update</button>
+                    <button class="btn btn-outline-primary " type="submit">Update</button>
                     <input  class="btn btn-outline-warning " type="button" value="Clear" onclick="reset()">  
                     
                 </div>
