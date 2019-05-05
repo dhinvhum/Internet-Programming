@@ -21,6 +21,16 @@
 
         <nav class="navbar navbar-light bg-light justify-content-between">
                 <a class="navbar-brand">UPDATE PRODUCT</a>
+                <form class="form-inline" action="login.php">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <input type="button" class="btn btn-outline-warning" onclick="product_table()" value="back">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <button class="btn btn-outline-danger" type="submit">logout</button>
+                    </div>
+                </div>
+            </form>
         </nav>
 
         <br>

@@ -15,7 +15,7 @@
 <body>
 
     <nav class="navbar navbar-light bg-light justify-content-between">
-                <a class="navbar-brand">TABLE PRODUCT</a>
+                <a class="navbar-brand">REPORT</a>
                 <form class="form-inline" action="login.php">
                   <div class="form-row">
                      <div class="form-group col-md-6">
@@ -37,17 +37,17 @@
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <form class="Daily Report" method="POST">
-                        <button class="btn btn-primary btn-lg" name="daily" type="submit">Daily</button>
+                        <center><input class="btn btn-primary btn-lg" name="daily" type="submit" value="Daily"></center>
                     </form>
                 </div>
                 <div class="form-group col-md-4">
                     <form class="Mountly Report" method="POST">
-                        <button class="btn btn-warning btn-lg" name="mountly" type="submit">Mounly</button>
+                        <center><input class="btn btn-warning btn-lg" name="montly" type="submit" value="Monthly"></center>
                     </form>
                 </div>
                 <div class="form-group col-md-4">
                     <form class="Yearly Report" method="POST">
-                        <button class="btn btn-danger btn-lg" name="yearly" type="submit">Yearly</button>
+                        <center><input class="btn btn-danger btn-lg" name="yearly" type="submit" value="Yearly"></center>
                     </form>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                     $sql = 'SELECT * FROM report WHERE Date LIKE "'.$day.'" ';
                     $result = mysqli_query($connect, $sql);
                     echo '<p>Date : '.$day.'</p>';
-                } else if (isset($_POST['mountly'])){
+                } else if (isset($_POST['montly'])){
                     $sql = 'SELECT * FROM report WHERE Date LIKE "'.$month.'%" ';
                     echo '<p>Month : '.$month.'</p>';
                     $result = mysqli_query($connect, $sql);
@@ -104,13 +104,12 @@
                             echo '<tbody><tr>';
                                 for ($i=0; $i<$numfields; $i++) {
                                     echo '<td>'.$row[$i].'&nbsp;</td>'."\n";
-                                    $totalprice = $totalprice+$row['Price'];
-                                    
                                 }
+                                    $totalprice = $row['Totalprice']+$totalprice;
                                 echo '</tr>';
                                 
                         }
-                                echo '<tr>';
+                                echo '<tr class="table-danger">';
                                 echo '<td colspan="4" >AGGREGATE</td><td>'.$totalprice.'</td>';
                                 echo '</tr>';
                         echo '</table>';

@@ -107,7 +107,7 @@
                                 echo '</tr>';
                                 echo '</form>';
                         }
-                        echo '<td><input name="update" class="btn btn-outline-success" type="button" value="insert" onclick="insert_emp()"></td>'."\n";
+                        echo '<td colspan="7"><center><input name="update" class="btn btn-outline-success" type="button" value="insert" onclick="insert_emp()"></center></td>'."\n";
                         echo '</table>';
                     }   
             
