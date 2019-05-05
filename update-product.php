@@ -17,6 +17,11 @@
     <?php
         session_start();
         $_SESSION['id'] = $_POST['id'];
+
+        $connect = mysqli_connect("localhost", "root", "", "store");
+        $sql = 'SELECT Sweater FROM product WHERE ID = "'.$_SESSION['id'].'"';
+        $result = mysqli_query($connect, $sql);
+        $row = mysqli_fetch_assoc($result);
     ?>
 
         <nav class="navbar navbar-light bg-light justify-content-between">
@@ -38,7 +43,11 @@
     <div class="container">
 
         <div class="container-form">
-        
+
+            <?php
+                echo '<p>Update ';
+                echo  $row['Sweater'].'</p>';
+            ?>
 
             <form class="update-product" action="update-product-set.php" method="POST">
             <div class="form-group">
