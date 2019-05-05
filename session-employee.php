@@ -14,6 +14,5 @@
     } else {
         header("location:insert-employee.php");
     }
-    
-    
+      
 ?>
