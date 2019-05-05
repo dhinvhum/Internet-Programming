@@ -41,7 +41,9 @@
             }
             
             if (!$alertcheck) {
-                echo '<script>alert("Wrong USERNAME or PASSWORD!!");</script>';
+                echo '<div class="alert alert-danger" role="alert">
+                <center>Wrong ID or PASSWORD!!</center>
+              </div>';
             }
         ?>
 
