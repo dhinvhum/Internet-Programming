@@ -90,7 +90,7 @@
         
             echo '</table>';
             echo '<div class="form-button">';
-            echo '<input class="btn btn-outline-primary" name="update" type="submit" value="Order">'."\n";
+            echo '<input class="btn btn-outline-primary" name="update" type="submit" value="Order" onclick="confirmbox()">'."\n";
             echo '<input class="btn btn-outline-warning" type="button" value="Clear" onclick="reset()">';
             echo '</div>';
             echo '</form>';
