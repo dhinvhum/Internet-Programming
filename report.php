@@ -78,7 +78,7 @@
                 }else {
                     $sql = 'SELECT * FROM report WHERE Date LIKE "'.$day.'" ';
                     $result = mysqli_query($connect, $sql);
-                    echo $day;
+                    echo '<p>Date : '.$day.'</p>';
                 }
 
                     $numrows = mysqli_num_rows($result);

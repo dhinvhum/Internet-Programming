@@ -43,17 +43,17 @@
                 <div class="form-group">
                               
                         <label class="label">Name&nbsp:</label>
-                        <input type="text" name="UpdateEmployee-Name" class="form-control border border-secondary rounded" placeholder="Input your name"require>
+                        <input type="text" name="UpdateEmployee-Name" class="form-control border border-secondary rounded" placeholder="Input your name">
                         
                         <label class="label">Surname&nbsp:</label>
-                        <input type="text" name="UpdateEmployee-Surname" class="form-control border border-secondary rounded" placeholder="Input your surname" require>
+                        <input type="text" name="UpdateEmployee-Surname" class="form-control border border-secondary rounded" placeholder="Input your surname">
                 
                         <label class="label">Password&nbsp:</label>
-                        <input type="text" name="UpdateEmployee-Password" class="form-control border border-secondary rounded" placeholder="Password" require>
+                        <input type="text" name="UpdateEmployee-Password" class="form-control border border-secondary rounded" placeholder="Password">
                         <small id="emailHelp" class="form-text text-muted">Please share the password only this employee.</small>
 
                         <label class="label">Postition&nbsp:</label>
-                        <select name="UpdateEmployee-position" class="form-control border border-secondary rounded" require>
+                        <select name="UpdateEmployee-position" class="form-control border border-secondary rounded">
                             <option value="">Please select</option>
                             <option value="Manager">Manager</option>
                             <option value="Cashier">Cashier</option>

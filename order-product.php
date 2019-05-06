@@ -72,6 +72,7 @@
             echo '<th scope="col">Product</th>';
             echo '<th scope="col">Price</th>';
             echo '<th scope="col">Enough</th>';
+            echo '<th scope="col">Type</th>';
             echo '<th scope="col">Quantity</th>';
             echo '</thead></tr>';
 
@@ -90,7 +91,7 @@
         
             echo '</table>';
             echo '<div class="form-button">';
-            echo '<input class="btn btn-outline-primary" name="update" type="submit" value="Order" onclick="confirmbox()">'."\n";
+            echo '<input class="btn btn-outline-primary" name="update" type="submit" value="Order">'."\n";
             echo '<input class="btn btn-outline-warning" type="button" value="Clear" onclick="reset()">';
             echo '</div>';
             echo '</form>';

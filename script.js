@@ -1,9 +1,4 @@
 
-//confirm box
-function confirmbox() {
-    window.confirm("Confirm!!");
-}
-
 //reset
 function reset() {
     document.reset();
