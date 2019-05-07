@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <!-- Style -->
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Login</title>
+    <title>ORDER PRODUCT</title>
 </head>
 <body>
 
