@@ -19,9 +19,13 @@
         $_SESSION['id'] = $_POST['id'];
 
         $connect = mysqli_connect("localhost", "root", "", "store");
-        $sql = 'SELECT Sweater FROM product WHERE ID = "'.$_SESSION['id'].'"';
+        $sql = 'SELECT Sweater,Price,Quantity FROM product WHERE ID = "'.$_SESSION['id'].'"';
         $result = mysqli_query($connect, $sql);
         $row = mysqli_fetch_assoc($result);
+
+        $minprice = ($row['Price']*(-2))+$row['Price'];
+        $minquan = ($row['Quantity']*(-2))+$row['Quantity'];
+
     ?>
 
         <nav class="navbar navbar-light bg-light justify-content-between">
@@ -55,12 +59,16 @@
 
                 <div class="form-group col-md-6">
                         <label class="label">Price&nbsp:</label>
-                        <input type="number" name="price" value=0 class="form-control border border-secondary rounded">
+                        <?php
+                        echo '<input type="number" name="price" min="'.$minprice.'" value=0 class="form-control border border-secondary rounded">';
+                        ?>
 
                 </div>     
                 <div class="form-group col-md-6"> 
                         <label class="label">Quantity&nbsp:</label>
-                        <input type="number" name="quan" value=0 class="form-control border border-secondary rounded">
+                        <?php
+                        echo '<input type="number" name="quan" min="'.$minquan.'" value=0 class="form-control border border-secondary rounded">';
+                        ?>php
                 </div>
 
                 <small id="emailHelp" class="form-text text-muted">*If you want to minus input in negative number.</small>
